@@ -12,6 +12,7 @@ public class CommandeService {
     @Autowired
     private CommandeRepository commandeRepository ;
     public Commande addCommande(Commande commande){
+
         return commandeRepository.save(commande);
     }
     public List<Commande> ListeCommande(){return commandeRepository.findAll();}

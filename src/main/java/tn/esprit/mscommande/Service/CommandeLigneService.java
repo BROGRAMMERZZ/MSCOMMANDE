@@ -4,11 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.mscommande.DAO.entities.CommandeLigne;
 import tn.esprit.mscommande.DAO.repositories.CommandeLigneRepository;
+
+import java.util.List;
+
 @Service
 public class CommandeLigneService {
     @Autowired
     CommandeLigneRepository commandeLigneRepository ;
 
+    public List<CommandeLigne> findCommandeLigne(){
+        return commandeLigneRepository.findAll();
+    }
     public CommandeLigne createCommandeLigne(CommandeLigne commandeLigne){
         return commandeLigneRepository.save(commandeLigne);
     }
