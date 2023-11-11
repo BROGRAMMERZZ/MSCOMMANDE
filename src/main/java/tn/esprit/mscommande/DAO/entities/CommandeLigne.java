@@ -1,0 +1,65 @@
+package tn.esprit.mscommande.DAO.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class CommandeLigne implements Serializable {
+    private static final long serialVersionUID = 6 ;
+    @Id
+    @GeneratedValue
+    private int idCommandeLigne ;
+    private int idProduit ;
+    private int qte ;
+    private float prixProduit ;
+    private float prixLigne ;
+
+    public int getIdCommandeLigne() {
+        return idCommandeLigne;
+    }
+
+    public int getIdProduit() {
+        return idProduit;
+    }
+
+    public int getQte() {
+        return qte;
+    }
+
+    public float getPrixProduit() {
+        return prixProduit;
+    }
+
+    public float getPrixLigne() {
+        return prixLigne;
+    }
+
+    public void setIdProduit(int idProduit) {
+        this.idProduit = idProduit;
+    }
+
+    public void setQte(int qte) {
+        this.qte = qte;
+    }
+
+    public void setPrixProduit(float prixProduit) {
+        this.prixProduit = prixProduit;
+    }
+
+    public void setPrixLigne(float prixLigne) {
+        this.prixLigne = prixLigne;
+    }
+
+    public CommandeLigne() {
+    }
+
+    public CommandeLigne(int idCommandeLigne, int idProduit, int qte, float prixProduit, float prixLigne) {
+        this.idCommandeLigne = idCommandeLigne;
+        this.idProduit = idProduit;
+        this.qte = qte;
+        this.prixProduit = prixProduit;
+        this.prixLigne = prixLigne;
+    }
+}
