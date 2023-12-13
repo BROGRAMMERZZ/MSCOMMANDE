@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.mscommande.DAO.entities.Commande;
 import tn.esprit.mscommande.DAO.repositories.CommandeRepository;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -12,7 +13,7 @@ public class CommandeService {
     @Autowired
     private CommandeRepository commandeRepository ;
     public Commande addCommande(Commande commande){
-
+        commande.setDateCommande(new Date());
         return commandeRepository.save(commande);
     }
     public List<Commande> ListeCommande(){return commandeRepository.findAll();}

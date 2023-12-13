@@ -6,21 +6,21 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-public class CommandeLigne implements Serializable {
+public class CommandeLigne{
     private static final long serialVersionUID = 6 ;
     @Id
     @GeneratedValue
     private int idCommandeLigne ;
-    private int idProduit ;
+    private String idProduit ;
     private int qte ;
     private float prixProduit ;
     private float prixLigne ;
-
+    private Commande commande ;
     public int getIdCommandeLigne() {
         return idCommandeLigne;
     }
 
-    public int getIdProduit() {
+    public String getIdProduit() {
         return idProduit;
     }
 
@@ -36,7 +36,7 @@ public class CommandeLigne implements Serializable {
         return prixLigne;
     }
 
-    public void setIdProduit(int idProduit) {
+    public void setIdProduit(String idProduit) {
         this.idProduit = idProduit;
     }
 
@@ -55,7 +55,7 @@ public class CommandeLigne implements Serializable {
     public CommandeLigne() {
     }
 
-    public CommandeLigne(int idCommandeLigne, int idProduit, int qte, float prixProduit, float prixLigne) {
+    public CommandeLigne(int idCommandeLigne, String idProduit, int qte, float prixProduit, float prixLigne) {
         this.idCommandeLigne = idCommandeLigne;
         this.idProduit = idProduit;
         this.qte = qte;

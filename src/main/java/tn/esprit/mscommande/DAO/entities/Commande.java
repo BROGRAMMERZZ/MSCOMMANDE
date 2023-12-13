@@ -25,6 +25,14 @@ public class Commande implements Serializable {
         return idCommande;
     }
 
+    public List<CommandeLigne> getCommandeLignes() {
+        return commandeLignes;
+    }
+
+    public void setCommandeLignes(List<CommandeLigne> commandeLignes) {
+        this.commandeLignes = commandeLignes;
+    }
+
     public Date getDateCommande() {
         return dateCommande;
     }
