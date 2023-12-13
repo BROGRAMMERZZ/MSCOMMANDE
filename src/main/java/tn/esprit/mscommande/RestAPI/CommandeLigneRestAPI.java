@@ -23,7 +23,6 @@ public class CommandeLigneRestAPI {
 
     @PostMapping(value = "{id}",produces = MediaType.APPLICATION_JSON_VALUE)
     public CommandeLigne addCommandeLigne(@RequestBody CommandeLigne commandeLigne ,@PathVariable("id") int idCommande){
-
         return commandeLigneService.createCommandeLigne(commandeLigne,idCommande);
     }
 }
